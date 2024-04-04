@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tỏ tình</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="love">
+        <h2>Mình <span>thích </span> <span id="namecr"></span></h2>
+        <img
+          style="width: 100px"
+          src="kisspng-love-heart-love-heart-romance-clip-art-picture-of-red-heart-5aaeb718420cb8.8640685015213995762706.png"
+          alt=""
+        />
+        <h2><span id="namecr2"></span> làm người yêu mình nha</h2>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div>
+          <button style="position: absolute">Không</button>
+          <a id="yes" href="yes.html">Mình đồng ý</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+
+////////////////
+    $("button").on("mouseover", function () {
+      var maxWidth = window.innerWidth - $(this).outerWidth(); // Lấy chiều rộng tối đa để nút không đi ra khỏi màn hình
+      var maxHeight = window.innerHeight - $(this).outerHeight(); // Lấy chiều cao tối đa để nút không đi ra khỏi màn hình
+
+      $(this).animate(
+        {
+          top: Math.random() * maxHeight + "px", // Lấy một giá trị random nhưng không lớn hơn maxHeight
+          left: Math.random() * maxWidth + "px", // Lấy một giá trị random nhưng không lớn hơn maxWidth
+        },
+        "medium"
+      );
+    });
+    $("button").click(function () {
+		$(this).animate(
+		  {
+			top: Math.random() * window.innerHeight + "px",
+			left: Math.random() * window.innerWidth + "px",
+		  },
+		  "medium"
+		);
+	  });
+  </script>
+</html>
